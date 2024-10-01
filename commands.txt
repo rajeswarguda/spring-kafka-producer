@@ -1,0 +1,12 @@
+
+zookeeper-server-start C:\Users\rajes\SW\kafka\config\zookeeper.properties
+
+kafka-server-start C:\Users\rajes\SW\kafka\config\server.properties
+
+kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-message-topic
+
+kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test-greeting-topic
+
+kafka-topics --list --bootstrap-server localhost:9092
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic test-message-topic
